@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 下拉菜单:下拉菜单能够节省页面空间，正常状态下显示一个选项，单击展开所以选项 -->
+    <!-- 下拉菜单的宽度是由 <option> 标记中包含的最长文本的宽度决定的 -->
+    <form name="forBox" method="post" action="">
+        <select name="select">
+            <option value="成都">成都</option>
+            <option value="广州">广州</option>
+            <option value="四川">四川</option>
+            <option value="上海">上海</option>
+        </select>
+    </form>
+<!-- 
+    列表项：在页面中列表项可以显示出几条信息，
+    一旦超出这个信息量，在列表项右侧会
+    出现滚动条，拖动滚动条可以看到所有选项 -->
+    <form name="forBox" method="post" action="">
+        <!-- size="2" 表示一次显示 2 条数据 -->
+        <select name="select" size="2" multiple="multiple">
+            <option value="成都">成都</option>
+            <option value="广州">广州</option>
+            <option value="四川">四川</option>
+            <option value="上海">上海</option>
+        </select>
+    </form>
+
+    <!-- 文本域:当用户想要填入多行文本时，
+        就应该使用文本域而不是文本字段。
+        文本域使用 <textarea> 标记 -->
+     <form name="forBox" method="post" action="">
+         <!-- clos 代表列数，rows 代表行数 -->
+         留下您的联系方式：<textarea name="textarea" cols="35"
+         rows="5"></textarea>
+     </form>          
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+列表作为网页设计的重要内容之一，能够用来制作导航栏和新闻列表等。
+HTML 列表分为：有序列表（ol），无序列表（ul）以及自定义列表（dl）。
+-->
+
+<!-- 
+    无序列表是一个项目的列表，此列项目使用实心圆、空心圆、方块进行标记，无序列表使用 <ul> 标签。
+    无序列表 <ul> 标签的 type 属性：
+disc(默认):实心圆
+circle:	空心圆
+square:	小方块
+    -->
+
+ <p>无序列表</p>
+ <ul type="circle">
+     <li>列表像1</li>
+     <li>列表项2</li>
+ </ul>
+
+ <br>
+ <br/>
+ <br/>
+
+ <!-- 
+有序列表也是一列项目，列表项目使用数字进行标记。有序列表始于 <ol> 标签。每个列表项始于 <li> 标签。
+   有序列表 <ol> 标签的 type 属性：
+1（默认）:数字表示（1，2，3...)
+A:大写字母表示（A,B,C...)
+a:小写字母表示（a,b,c...)
+I：大写罗马数字表示(I,II,III…)
+i：小写罗马数字表示(i,ii,iii…)
+-->
+ 
+<p>有序列表</p>
+<ol type="A">
+<li>列表项1</li>
+<li>列表项2</li>
+</ol>
+
+<!-- 
+                自定义列表（dl）
+定义：自定义列表不仅仅是一列项目，而是项目及其注释的组合。自定义列表以 <dl> 标签开始。
+每个自定义列表项以 <dt> 开始。每个自定义列表项的定义以 <dd> 开始。自定义列表的列表项前没有任何项目符号
+ -->
+
+ <dl>
+     <dt>
+        春天
+     </dt>
+     <dd>是万物复苏，百花争艳的季节</dd>
+ </dl>
+
+ <dt>夏天</dt>
+ <dd>是夏日绵绵，烈日炎炎的季节</dd>
+</body>
+</html>

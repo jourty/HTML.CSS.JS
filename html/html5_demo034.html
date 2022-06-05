@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填充和渐变</title>
+</head>
+<body>
+    <!-- 
+        使用 fillStyle 属性，设置或返回用于填充绘画的颜色、渐变或模式。语法为
+        ctx.fillStyle = color | gradient | pattern;
+        color 表示绘图填充的颜色。默认值是 #000000。
+
+        gradient 表示用于填充绘图的渐变对象（线性或放射性）。
+
+        pattern 表示用于填充绘图的 pattern 对象。
+     -->
+<!--添加canvas元素，设置画布的大小-->
+<canvas id="mycanvas" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+  </canvas>
+
+  <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //填充为红色
+    ctx.fillStyle = "red";
+    //绘制实心矩形
+    ctx.fillRect(10, 10, 100, 200);
+  </script>
+
+<!-- 
+使用 createLinearGradient() 方法创建线性渐变。语法为
+ctx.createLinearGradient(x0, y0, x1, y1);
+x0 表示渐变开始点的 x 坐标。
+
+y0 表示渐变开始点的 y 坐标。
+
+x1 表示渐变结束点的 x 坐标。
+
+y1 表示渐变结束点的 y 坐标。
+
+
+使用 addColorStop() 方法规定渐变对象中的颜色和停止位置。语法为
+gradient.addColorStop(stop, color);
+
+stop 表示渐变中开始与结束之间的位置。是介于 0.0 与 1.0 之间的值。
+
+color 表示在结束位置显示的 CSS 颜色值。
+ -->
+
+    <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+  
+      <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        //设置渐变色
+        var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+        gradient.addColorStop(0, "red");
+        gradient.addColorStop("0.2", "orange");
+        gradient.addColorStop("0.5", "yellow");
+        gradient.addColorStop("0.7", "green");
+        gradient.addColorStop(1, "blue");
+        //填充色为渐变色
+        ctx.fillStyle = gradient;
+        //绘制实心矩形
+        ctx.fillRect(10, 10, 100, 200);
+      </script>
+
+      <!-- 
+        使用 createRadialGradient() 方法创建放射状/环形的渐变。语法为
+          ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+x0 表示渐变的开始圆的 x 坐标。
+
+y0 表示渐变的开始圆的 y 坐标。
+
+r0 表示开始圆的半径。
+
+x1 表示渐变的结束圆的 x 坐标。
+
+y1 表示渐变的结束圆的 y 坐标。
+
+r1 表示结束圆的半径。
+       -->
+
+        <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+  
+      <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        //设置渐变色
+        var gradient = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        gradient.addColorStop(0, "red");
+        gradient.addColorStop("0.2", "orange");
+        gradient.addColorStop("0.5", "yellow");
+        gradient.addColorStop("0.7", "green");
+        gradient.addColorStop(1, "blue");
+        //填充色为渐变色
+        ctx.fillStyle = gradient;
+        //绘制实心矩形
+        ctx.fillRect(10, 10, 190, 150);
+      </script>
+
+<!-- fill() 方法
+使用 fill() 方法填充当前的图像（路径）。默认颜色是黑色。
+填充另一种颜色/渐变使用 fillStyle 属性。语法为：
+ctx.fill();
+-->
+<!--添加canvas元素，设置画布的大小-->
+<canvas id="mycanvas" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+  </canvas>
+
+  <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //绘制矩形
+    ctx.rect(20, 20, 150, 100);
+    ctx.fillStyle = "red";
+    ctx.fill();
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>矩形绘制</title>
+</head>
+<body>
+    <!-- 使用 rect() 方法创建矩形。语法为：
+    ctx.rect(x,y,width,height);
+x 表示矩形左上角的 x 坐标。
+
+y 表示矩形左上角的 y 坐标。
+
+width 表示矩形的宽度，以像素计。
+
+height 表示矩形的高度，以像素计
+    -->
+
+    <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+
+    <script type="text/javascript">
+
+//获取canvas元素
+        var myCanvas=document.getElementById("mycanvas");
+ //获取Context上下文
+        var ctx=myCanvas.getContext("2d");
+ //绘制矩形
+        ctx.rect(10,10,100,200);
+  //绘制已定义的路径
+        ctx.stroke();     
+
+    </script>
+
+<!-- // fillRect() 方法介绍 -->
+<!-- // 使用 fillRect() 方法创建实心矩形。语法为
+ctx.fillRect(x, y, width, height);
+-->
+<canvas id="mycanvas" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+</canvas>
+
+<script type="text/javascript">
+
+    var myCanvas=document.getElementById("mycanvas");
+
+    var ctx=myCanvas.getContext("2d");
+
+    ctx.fillRect(100,100,100,200);
+
+    ctx.stroke();
+</script>
+
+<!-- 使用 clearRect() 方法清空给定矩形内的指定像素。语法为
+ctx.clearRect(x, y, width, height);
+-->
+<canvas id="mycanvas" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+</canvas>
+
+<script type="text/javascript">
+
+   var myCanvas=document.getElementById("mycanvas");
+
+   var ctx=myCanvas.getContext("2d");
+
+   ctx.fillRect(200,200,100,100);
+
+   ctx.clearRect(250,250,50,50);
+
+   ctx.stroke();
+</script>
+</body>
+</html>

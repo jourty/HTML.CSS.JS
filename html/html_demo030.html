@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签定义），
+        每行被分割为若干单元格（由 <td> 标签定义）。字母 td 指表格数据（table data） 
+      -->
+    <table>
+        <tr>
+            <td>第一行第一列</td>
+            <td>第一行第二列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二列第二列</td>
+        </tr>
+    </table>
+    <!-- 
+          border属性
+       -->
+    <table border="1">
+        <tr>
+            <td>第一行第一列</td>
+            <td>第一行第二列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二列第二列</td>
+        </tr>
+    </table>
+
+    <!-- caption 元素定义表格标题 -->
+    <table border="1" width="300px" height="150px">
+        <caption>
+            表格标题
+        </caption>
+        <tr>
+            <td>第一行第一列</td>
+            <td>第一行第二列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二行第二列</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!-- 表格的表头使用 <th> 标签进行定义，表头通常用于列名字 
+       width:设置表格宽度
+       height：设置表格高度
+       bgcolor：设置背景颜色
+       cellspacing：设置单元格与单元格之间的距离，默认2px
+       cellpadding：设置文字与单元格之间的距离，默认1px
+    
+    -->
+    <table border="1" width="300px" height="150px" bgcolor="green" cellspacing="3px" cellpadding="3px">
+        <caption>支出表</caption>
+        <tr>
+            <th>支出</th>
+            <th>备注</th>
+        </tr>
+
+        <tr>
+            <td>32</td>
+            <td>买苹果</td>
+        </tr>
+
+        <tr>
+            <td>24</td>
+            <td>买饮料</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <!-- 单元格跨列  colspan 又称跨列 -->
+    <table border="1" ;width="300px" height="150px" bgcolor="green">
+        <h3>单元跨两列</h3>
+        <tr>
+            <th>姓名</th>
+            <th colspan="2">电话</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>344 22 112</td>
+            <td>211 32 123</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>433 31 212</td>
+            <td>234 21 654</td>
+        </tr>
+    </table>
+
+
+    <!--单元格跨行和跨列  rowspan 又称跨行  -->
+    <table border="1" cellspacing="0">
+        <h3>单元跨两行</h3>
+        <tr>
+            <th>姓名</th>
+            <td>张三</td>
+        </tr>
+        <tr>
+            <th rowspan="2">电话</th>
+            <td>344 22 112</td>
+        </tr>
+        <tr>
+            <td>234 21 654</td>
+        </tr>
+    </table>
+</body>
+
+</html>

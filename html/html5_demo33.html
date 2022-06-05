@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆和扇形的绘制</title>
+</head>
+<body>
+    <!-- 
+使用 arc() 方法绘制圆或者椭圆。语法为：
+
+ctx.arc(x, y, r, sAngle, eAngle, counterclockwise);
+
+
+x 表示圆的中心的 x 坐标。
+
+y 表示圆的中心的 y 坐标。
+
+r 表示圆的半径。
+
+sAngle 表示起始角，以弧度计（特别需要注意的是弧的圆形的三点钟位置是 0 度而不是常规以为的 90 度）。
+
+eAngle 表示结束角，以弧度计。
+
+counterclockwise 表示绘制圆的方向，值为 false 表示顺时针，为 true 表示逆时针。是一个可选值，默认值是 false。
+     -->
+
+     <!--添加canvas元素，设置画布的大小-->
+     <canvas id="mycanvas" width="520px" height="1314px">
+         对不起，你的浏览器不支持canvas
+     </canvas>
+
+     <script type="text/javascript">
+//获取canvas元素
+         var myCanvas=document.getElementById("mycanvas");
+ //获取Context上下文
+         var ctx=myCanvas.getContext("2d")
+//开始路径绘制
+         ctx.beginPath();
+//绘制圆
+         ctx.arc(100,75,50,0,2*Math.PI);
+//绘制已定义的路径
+         ctx.stroke();
+     </script>
+
+
+<canvas id="mycanvas" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+</canvas>
+
+<script type="text/javascript">
+
+    var myCanvas=document.getElementById("mycanvas");
+
+    var ctx=myCanvas.getContext("2d");
+
+    ctx.beginPath();
+
+    ctx.arc(100,75,50,0,0.5*Math.PI);
+
+    //闭合
+    ctx.moveTo(100,125);
+    ctx.lineTo(100,75);
+    ctx.lineTo(150,75);
+
+    ctx.stroke()
+</script>
+</body>
+</html>

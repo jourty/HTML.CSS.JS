@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML5 表单新增的属性</title>
+</head>
+<!-- autocomplete 属性规定表单是否应该启用自动完成功能：自动完成允许浏览器预测对字段的输入，当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。当 autocomplete 属性值为 on 时表示启用自动完成功能，为 off 时表示关闭。autocomplete 属性适用于 <form>，以及下面的 <input> 类型：text, search, url, telephone, email, password, datepickers, range 以及 color-->
+<form action="#" method="get" 
+autocomplete="on">
+Name:<input type="text" name="name"/><br/>
+E-mail:<input type="email" name="mail" autocomplete="off" />
+<input type="submit" value="提交" />
+</form>
+
+<!-- autofocus 属性规定在页面加载时，域自动地获得焦点。适用于所有 <input> 标签的类型。-->
+<form action="#" method="get">
+Name:<input type="text" name="user_name" autofocus="autofocus"  /><br />
+<input type="submit" value="提交" />
+</form>
+
+<!--form 属性规定输入域所属的一个或多个表单。form 属性适用于所有 <input> 标签的类型。form 属性必须引用所属表单的 id -->
+<form action="#" method="get" id="user_from">
+First name:<input type="text" name="fname" />
+<input type="submit" value="提交" />
+</form>
+
+ <p>
+    下面的输入域在 form 元素之外，但仍然是表单的一部分， 也就是说提交按钮会把
+    first name 和 last name的值都提交。
+  </p>
+  Last name:<input type="text" name="lname" form="user_from" />
+  
+  <!-- multiple 属性规定输入域中可选择多个值，适用于以下类型的 <input> 标签：email 和 file-->
+  <form action="#" method="get" id="user_from">
+  选择文件:<input type="file" name="file" multiple="multiple"/>
+  <input type="submit" value="提交" />
+  </form>
+  
+  <!-- novalidate 属性规定在提交表单时不应该验证 form 或 input 域。适用于 <form>，以及下面的 <input> 类型：text, search, url, telephone, email, password, datepickers, range 以及 color-->
+  <form action="#" method="get" id="user_form" novalidate="true">
+  E-mail:<input type="email" name="user_email" />
+  <input type="submit" value="提交"/>
+  </form>
+  
+  <!-- pattern 属性规定用于验证 input 域的模式（pattern）。模式（pattern） 是正则表达式。pattern 属性适用于以下类型的 <input> 标签：text, search, url, telephone, email 以及 password-->
+  <form action="#" method="#">
+  Name:<input type="text" name="name" pattern="[A-z]{4}" title="请输入四个字母" />
+  <input type="submit" value="提交" />
+  </form>
+  
+  <!-- placeholder 属性提供一种提示（hint），描述输入域所期待的值。适用于以下类型的 <input> 标签：text, search, url, telephone, email 以及 password。提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失-->
+  <form action="#" method="get">
+  <input type="search" name="user_search" placeholder="实验楼"/>
+  <input type="submit" value="提交"/>
+  </form>
+  
+  <!-- required 属性规定必须在提交之前填写输入域（不能为空）。适用于以下类型的 <input> 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file-->
+  <form action="#" method="get">
+  <input type="search" name="user_search" required="required"/>
+  <input type="submit" value="提交"/>
+  </form>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘制简单图形</title>
+</head>
+<body>
+<!-- Canvas 元素 -->
+<canvas id="myCanvas" width="200" height="100" style="border: 2px solid #000000;">
+</canvas>
+
+
+  <!--添加canvas元素，设置画布的大小-->
+    <canvas id="myCanvas" width="200" height="100" style="border: 2px solid #000000;">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+       
+
+       <script type="text/javascript">
+    // <!-- 添加了 id 属性后，找到对应的 canvas 元素： -->
+    var myCanvas=document.getElementById("myCanvas");
+    // <!--  通过document.getElementById来找到id为myCanvas的元素 -->
+ 
+    // <!-- 然后通过 canvas 元素的 getContext()方法获取上下文，
+    //  即创建 Context 对象，以获取允许进行绘制的 2D 环境 -->
+     var ctx=myCanvas.getContext("2d");
+ 
+ 
+    //  <!-- 最后通过 Context 对象的相关方法完成绘制，比如：fillStyle()等 -->
+
+    //设置颜色
+    ctx.fillStyle="red";
+
+    //设置矩形的位置和尺寸（位置从 左上角原点坐标开始，尺寸为100*100的矩形）
+    ctx.fillRect(0,0,100,100);
+    </script>
+</body>
+</html>

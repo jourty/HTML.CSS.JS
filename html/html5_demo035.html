@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字绘制</title>
+</head>
+<body>
+    <!-- 
+        使用 fillText() 方法在在画布上绘制实心文本。语法为：
+        ctx.fillText(text, x, y, maxWidth);
+        text 规定在画布上输出的文本。
+
+x 表示开始绘制文本的 x 坐标位置（相对于画布）。
+
+y 表示开始绘制文本的 y 坐标位置（相对于画布）。
+
+maxWidth 表示允许的最大文本宽度，以像素计。可选。
+     -->
+
+     <canvas id="mycanvas" width="520px" height="1314px">
+         对不起，你的浏览器不支持canvas
+     </canvas>
+
+     <script type="text/javascript">
+
+         var myCanvas=document.getElementById("mycanvas");
+
+         var ctx=myCanvas.getContext("2d");
+//绘制实心文本
+         ctx.fillText("Hello World",10,50);
+     </script>
+
+<!-- 使用 strokeText() 方法在画布上绘制空心文本。语法为：
+ctx.strokeText(text, x, y, maxWidth);
+-->
+ <!--添加canvas元素，设置画布的大小-->
+ <canvas id="mycanvas" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+  </canvas>
+
+  <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //设置字体样式
+    ctx.font = "50px Georgia";
+    //绘制空心文本
+    ctx.strokeText("Hello Syl!", 10, 50);
+  </script>
+</body>
+</html>

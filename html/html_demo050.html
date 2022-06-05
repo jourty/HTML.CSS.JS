@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 图像标签:在 HTML 中，图像由 <img> 标签定义。语法为： -->
+    <!-- <img>: 是空标签，它只包含属性，没有闭合标签。要在页面上显示图像，你需要使用源属性（src）。
+        src: 的值是图像文件的 URL，也就是引用该图像的文件的的绝对路径或相对路径。
+        alt: 规定图像的替代文本即当图片未成功显示的时候显示的文本信息。
+        title :设置鼠标悬停时显示的内容（一般不用设置）。
+        此外还可以通过设置 width 和 height 的值来设置图片的宽和高 -->
+    <img src="url" alt=""/>
+
+    <img src="https://labfile.oss.aliyuncs.com/courses/1236/coder.jpg"
+    alt="程序员"
+    title="你好啊"
+    width="700px"
+    height="100px"/>
+
+    <!-- 框架:使用框架，你可以在同一个浏览器窗口中显示不止一个页面 ,语法为-->
+    <iframe src="URL">
+          <!-- URL指向不同的页面 -->
+    </iframe>
+
+    <!-- iframe - 设置高度与宽度 -->
+    <iframe src="https://www.lanqiao.cn/"
+    width="400" height="400"></iframe>
+
+    <!-- iframe - 移除边框
+    frameborder 属性用于定义 iframe 表示是否显示边框。
+    设置属性值为 "0" 移除 iframe 的边框: -->
+    <iframe src="https://www.lanqiao.cn/"
+    width="400" height="400" 
+    frameborder="0"
+    ></iframe>
+<!-- 
+使用 iframe 来显示目标链接页面，目标链接的属性必须使用 iframe 的属性 -->
+<!-- 注： 因为 a 标签的 target 属性是名为 shiyanlou 的 iframe 框架，
+    所以在点击链接时页面会显示在 iframe 框架中。
+    需要保证 iframe 框架的 name 属性的名称与 a 标签的 target 属性名一致 -->
+<p><a href="https://www.lanqiao.cn" target="shiyanlou">实验楼</a></p>
+<iframe width="400" height="400" name="shiyanlou"></iframe>
+</body>
+</html>

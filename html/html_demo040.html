@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form> 标签用于创建 HTML 表单，常见的表单格式为： -->
+<!-- name：定义表单的名字。
+method：定义表单结果从浏览器传送到服务器的方式，
+默认参数为：get 。post 安全性更高，因此常用作传输密码等，而 get 安全性较低，一般用于查询数据。
+action：发送数据要去的地址。它的值必须是一个有效的 URL，
+可以是相对 URL 也可以是绝对 URL。如果没有提供此属性或者 action="#"，
+则数据将被发送到包含表单的页面的 URL -->
+
+    <form name="" method="" action=""></form>
+
+
+        <!--    文字字段语法
+    <input type="text" name="控件名字" value="文字字段的默认取值" 
+    size="控件的长度" maxlength="最长字符数"/> -->
+    <form name="forBox" method="post" action="">
+        姓名:<input type="text" name="name" size="20"/> <br>
+        年龄:<input type="text" name="age" size="40"
+         value="10" maxlength="3"/>
+    </form>
+
+<!-- 选择照片 -->
+<input type="file" value="选择照片"/>
+
+    <!-- 密码输入框 -->
+    密码：<input type="password" name="pwd"/>
+
+    <!-- 单选按钮 -->
+    <form name="forBox" method="post" action="">
+        <!--checked:表示默认选男  -->
+        <input type="radio" name="sex" value="male" checked/>男<br>
+        <input type="radio" name="sex" value="famale"/>女
+    </form>
+
+    <!-- 复选框
+    复选框可以让用户从一个选项列表中选择超出一个的选项
+    -->
+    <form name="forBox" method="post" accept="">
+        <input type="checkbox" name="music" checked/>音乐<br>
+        <input type="checkbox" name="art" />美术<br>
+        <input type="checkbox" name="math"/>数学<br>
+    </form>
+
+    <!-- 提交按钮（submit）:用于发送表单数据给服务器 -->
+    <form name="forBox" method="post" action="">
+        <input type="text" value="输入的内容"/>
+        <!-- <button type="submit">This a submit button</button> -->
+
+        <!-- or -->
+        <input type="submit" value="This a submit button"/>
+    </form>
+
+    <!-- 重置按钮（reset）:重置按钮用来清除用户在页面中输入的信息 -->
+    <form name="forBox" method="post" action="">
+        <input type="text"/>
+        <!-- <button type="reset">This a reset button</button> -->
+        <!-- or -->
+        <input type="reset" value="This a reset button"/>
+    </form>
+
+    <!-- 匿名按钮（button）:没有自动生效的按钮，但是可以使用 JavaScript 
+        代码进行定制。如果你省略了 type 属性，那么这就是默认值 -->
+        <button type="button">This a anonymous button</button>
+
+        <!-- or -->
+        <button>This a anonymous button</button>
+
+        <!-- or -->
+        <input type="button" value="This a anonymous button"/>
+</body>
+</html>
