@@ -1,0 +1,56 @@
+/* CSS Document */
+h1,h2,p{
+	text-align:center;
+}
+
+body{
+	background-image:url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);/* 设置背景图像 */
+}
+
+.menu{
+	width:80%;
+	background-color:burlywood;
+	margin-right:auto;
+	margin-left:auto;
+	padding:20px;  /* 背景填充 */
+	max-width:500px;/* 设置元素的最大宽度积 */
+}
+.item p{
+	display:inline-block;
+	}   
+.flavor{
+	text-align:left;
+	width:80%;
+}
+.price{
+	text-align:right;
+	width: 10%;
+}
+hr{
+	height:2px;
+	background-color:brown;/* 里面的颜色*/
+	border-color:brown;/* 边框的颜色*/
+}
+img{
+	display: block;/*居中*/
+	margin-left:auto;/* 设置左边浏览器边距,这样做的结果会依赖于浏览器*/
+	margin-right:auto;/* 设置右边浏览器边距,这样做的结果会依赖于浏览器*/
+}
+footer{
+	font-size:14px;/*字体大小*/
+}
+.address{
+	margin-bottom:5px; /*设置下边距为5px*/
+}
+a{
+	color:black;
+}
+a:vidited{
+	color:black; /* 已访问链接 */
+}
+a:hover{
+	color:brown;/* 鼠标移动到链接上 */
+}
+a:active{
+	color:brown; /* 鼠标点击时 */
+}
